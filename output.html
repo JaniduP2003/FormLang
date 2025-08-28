@@ -1,0 +1,27 @@
+<style>body { background:rgb(135, 179, 233); font-family: 'Helvetica Neue', sans-serif; padding: 20px; }.form-container {  background: white; max-width: 640px; margin: 0 auto; padding: 40px;  border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);}.form-container label { font-weight: 600; display: block; margin-bottom: 8px; color: #2c3e50; }.form-container input[type], .form-container textarea, .form-container select {  width: 100%; padding: 12px 16px; margin-bottom: 20px; border: 1px solid #dfe6e9; border-radius: 8px;  font-size: 15px; background: #f9f9f9;}.form-container input[type='checkbox'], .form-container input[type='radio'] {  margin-right: 8px;}.form-container button { background:rgb(173, 41, 185); border: none; padding: 12px 24px;  color: white; font-size: 16px; border-radius: 8px; cursor: pointer; }.form-container button:hover { background:rgb(54, 9, 63); }</style><form name="MyForm" class="form-container">
+<!-- Meta: author = Janidu -->
+<div style='margin-bottom: 12px;'><label>Username:<br><input type="text" name="username" pattern="[A-Za-z]+" required></label></div>
+<div style='margin-bottom: 12px;'><label>Password:<br><input type="password" name="password" required pattern=".{6,}"></label></div>
+<div style='margin-bottom: 12px;'><label>Name:<br><input type="text" name="name" pattern="[A-Za-z]+" required></label></div>
+<div style='margin-bottom: 12px;'><label>Age:<br><input type="number" name="age" min="18" max="99" required></label></div>
+<div style='margin-bottom: 12px;'><label>Email:<br><input type="email" name="email" required></label></div>
+<div style='margin-bottom: 12px;'><label>Day:<br><input type="date" name="Day" min="2000-01-01" max="2025-12-31" required></label></div>
+<div style='margin-bottom: 12px;'><label>Complaint:<br><textarea name="Complaint" rows="4" cols="40" >Complaint</textarea></label></div>
+<div style='margin-bottom: 12px;'><label>City:<br><select name="city" required><option value="Niwithigala">Niwithigala</option>
+<option value="Balangoda">Balangoda</option>
+<option value="kosgama">kosgama</option>
+</select></label></div>
+<div style='margin-bottom: 12px;'><label>Receipt:<br><input type="file" name="receipt" accept=".pdf" required></label></div>
+<div style='margin-bottom: 12px;'><label><input type="checkbox" name="Conditions" checked> Conditions</label></div>
+<div style='margin-top: 20px;'>
+<button type="submit">Submit</button>
+</div>
+</form>
+<script>
+document.forms['MyForm'].addEventListener('submit', function(e) {
+if ((Number(document.forms['MyForm'].elements['age'].value) < 18)) { e.preventDefault(); alert("You must be at least 18 years old."); }
+if ((Number(document.forms['MyForm'].elements['password'].value) == 0)) { e.preventDefault(); alert("Password can't be empty."); }
+if ((Number(document.forms['MyForm'].elements['email'].value) == 0)) { e.preventDefault(); alert("Email can't be empty."); }
+if ((Number(document.forms['MyForm'].elements['name'].value) == 0)) { e.preventDefault(); alert("Email can't be empty."); }
+});
+</script>
