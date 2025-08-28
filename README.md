@@ -98,7 +98,6 @@ start output.html      # Windows
 The repository includes:
 - Example `.form` scripts  
 - Generated `.html` output files  
-- A 3-minute walkthrough video (if provided) demonstrating form generation and error handling  
 
 Provide a `.form` script as input, and redirect the output to an `.html` file.
 # FormLang++: A Domain-Specific Language & HTML Form Generator
@@ -117,7 +116,7 @@ This project demonstrates concepts in **compiler construction**, including gramm
 - **Parsing & Code Generation:** Validates syntax and generates semantic HTML with `fprintf()`.  
 - **Validation Logic:** Supports simple conditions (e.g., `if age < 18`) with custom error messages.  
 - **Error Handling:** Reports malformed scripts with meaningful messages.  
-- **Demo Ready:** Includes sample `.form` scripts and corresponding generated `.html` outputs.  
+
 
 ---
 
@@ -134,7 +133,6 @@ This project demonstrates concepts in **compiler construction**, including gramm
 ```
 ├── lexer.l         # Lexical analyzer
 ├── parser.y        # Grammar and parser rules
-├── samples/        # Example .form scripts and generated outputs
 ├── README.md       # Project documentation
 ```
 
@@ -201,6 +199,6 @@ start output.html      # Windows
 The repository includes:
 - Example `.form` scripts  
 - Generated `.html` output files  
-- A 3-minute walkthrough video (if provided) demonstrating form generation and error handling  
+ 
 
 Provide a `.form` script as input, and redirect the output to an `.html` file.
